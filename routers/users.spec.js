@@ -28,8 +28,8 @@ describe("User routes", () => {
 
     test("should respond with 404 if the user is not found", async (done) => {
       const res = await request.get("/users/99");
-      expect(res.status).toEqual(200);
-      expect(res.body.message).toEqual("User no found");
+      expect(res.status).toEqual(404);
+      expect(res.body.message).toEqual("User not found");
       done();
     });
   });

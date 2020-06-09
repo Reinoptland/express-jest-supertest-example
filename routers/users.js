@@ -34,4 +34,12 @@ router.get("/", (req, res) => {
   res.send(users);
 });
 
+router.get("/:id", (req, res) => {
+  const user = users.find((user) => user.id === parseInt(req.params.id));
+  if (!user) {
+    res.status(404).send({ message: "User not found" });
+  }
+  res.send(user);
+});
+
 module.exports = router;
