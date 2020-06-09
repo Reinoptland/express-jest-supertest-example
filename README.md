@@ -1,5 +1,7 @@
 # Express / jest / supertest
 
+[![Codeship Status for Reinoptland/express-jest-supertest-example](https://app.codeship.com/projects/1f91f7d0-8c8e-0138-2e12-724cb8de9fe3/status?branch=master)](https://app.codeship.com/projects/399428)
+
 Here is a simple example of performing end to end test for an express api
 
 - [Supertest](https://www.npmjs.com/package/supertest)
