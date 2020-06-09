@@ -33,4 +33,34 @@ describe("User routes", () => {
       done();
     });
   });
+
+  describe("POST /users", () => {
+    test("should create a new user if firstName and lastName sent in the body", async (done) => {
+      // TDD -> writing the test first -> then we implement the test
+      // Test Driven Development
+      // AAA
+
+      // Arrange
+      // maybe get a token, NA in this app
+      const body = { firstName: "John", lastName: "Doe" };
+
+      // Act
+      const res = await request.post("/users").send(body);
+
+      // Assert
+      expect(res.status).toBe(200);
+      expect(res.body).toEqual({
+        message: "User created",
+        data: {
+          id: 6,
+          firstName: "John",
+          lastName: "Doe",
+        },
+      });
+
+      done();
+    });
+
+    test("should return a 400 bad request if firstName or lastName are not sent in the body", () => {});
+  });
 });

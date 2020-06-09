@@ -42,4 +42,11 @@ router.get("/:id", (req, res) => {
   res.send(user);
 });
 
+router.post("/", (req, res) => {
+  console.log(req.body);
+  const user = { ...req.body, id: users.length + 1 };
+  users.push(user);
+  res.send({ message: "User created", data: user });
+});
+
 module.exports = router;
