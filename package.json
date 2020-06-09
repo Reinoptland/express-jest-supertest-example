@@ -4,12 +4,15 @@
   "description": "Testing with jest and supertest",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
+    "test": "jest",
+    "test-watch": "jest --watch",
     "start": "node index.js"
   },
   "author": "Rein Op 't Land",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "jest": "^26.0.1",
+    "supertest": "^4.0.2"
   }
 }
