@@ -39,3 +39,19 @@ describe("GET /users", () => {
 
 1. Fire up a test database a populate it with test data (time consuming, but realistic setting)
 2. Mock the database by mocking the sequelize models for example (less time consuming, but also less realistic)
+
+## Exercise
+
+Using the scaffold already in place write tests for the following endpoints
+
+1. `POST /users`
+   - Should create a user
+   - Should return 400 with a message if the request does not contain firstName and lastName
+2. `PATCH /users/:id`
+   - Should update an existing user
+   - Should return 404 if the user doesn't exist
+   - Only firstName and lastName are allowed to be update, should return 403 if anything else is attempted to be updated
+3. `DELETE /users/:id`
+   - Should delete the user
+   - Should return 404 if the user doesn't exist
+   - Should return 401 unless the body of the request contains an Authorization header: 'Bearer I_AM_A_FAKE_TOKEN'
