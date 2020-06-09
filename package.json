@@ -1,0 +1,15 @@
+{
+  "name": "api-tests",
+  "version": "1.0.0",
+  "description": "Testing with jest and supertest",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node index.js"
+  },
+  "author": "Rein Op 't Land",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
