@@ -61,6 +61,15 @@ describe("User routes", () => {
       done();
     });
 
-    test("should return a 400 bad request if firstName or lastName are not sent in the body", () => {});
+    test("should return a 400 bad request if firstName or lastName are not sent in the body", async (done) => {
+      // Arrange
+      const body = {};
+      // Act
+      const res = await request.post("/users").send(body);
+      // Assert
+      expect(res.status).toBe(400);
+      expect(res.body.message).toBe("No firstName or lastName in the request");
+      done();
+    });
   });
 });

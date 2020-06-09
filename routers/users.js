@@ -43,7 +43,11 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  console.log(req.body);
+  if (!req.body.firstName || !req.body.lastName)
+    return res
+      .status(400)
+      .send({ message: "No firstName or lastName in the request" });
+
   const user = { ...req.body, id: users.length + 1 };
   users.push(user);
   res.send({ message: "User created", data: user });
