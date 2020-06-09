@@ -55,3 +55,9 @@ Using the scaffold already in place write tests for the following endpoints
    - Should delete the user
    - Should return 404 if the user doesn't exist
    - Should return 401 unless the body of the request contains an Authorization header: 'Bearer I_AM_A_FAKE_TOKEN'
+
+## Bonus
+
+Setup continuous integration (CI) with [Code Ship](https://documentation.codeship.com/basic/quickstart/getting-started/)
+
+CI's can run your tests when you push to github, or before you deploy. Making sure that you and your colleagues don't break the app
